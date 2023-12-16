@@ -4,7 +4,7 @@ require("dotenv").config();
 
 function generateToken(user) {
   console.log(user);
-  return jwt.sign(user, process.env.SECRET, { expiresin: "1h" });
+  return jwt.sign(user, process.env.SECRET, { expiresIn: "1h" });
 }
 function validateToken(req, res, next) {
   const accesToken = req.headers["authorization"];
